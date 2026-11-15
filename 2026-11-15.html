@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>速卖通选品情报 · 2026-11-15</title>
+<style>
+:root{--bg:#f5f6f8;--card:#fff;--line:#e4e7ec;--ink:#16181d;--ink2:#5a6472;
+--ink3:#8b95a3;--accent:#2f6fed;--accent-soft:#eaf1fe;--ok:#1a7a45;--ok-bg:#e6f3ea}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.top{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:9}
+.top .inner{padding:12px 0 10px}
+.toprow{display:flex;flex-wrap:wrap;align-items:baseline;gap:5px 12px}
+h1{margin:0;font-size:19px;letter-spacing:.2px}
+h1 .h1d{font-size:13.5px;color:var(--ink3);font-weight:400;margin-left:8px}
+.sp{flex:1 1 auto}
+.stat{display:flex;flex-wrap:wrap;gap:5px 14px;margin:0;font-size:12.5px;color:var(--ink3)}
+.stat b{color:var(--ink2);font-weight:600}
+.stat .pill{background:var(--accent-soft);border:1px solid #c9d8f5;color:var(--accent);
+border-radius:999px;padding:3px 11px;font-size:12.5px}
+.stat .pill b{color:var(--accent)}
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:9px;
+padding-top:9px;border-top:1px dashed var(--line)}
+.daynav{display:flex;flex-wrap:wrap;align-items:center;gap:7px}
+.dn-btn{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);
+background:var(--card);color:var(--ink2);border-radius:8px;padding:4px 10px;font-size:12.5px;
+white-space:nowrap;cursor:pointer}
+.dn-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft);text-decoration:none}
+.dn-btn.off{opacity:.45;cursor:not-allowed;background:var(--bg)}
+.dn-btn.off:hover{border-color:var(--line);color:var(--ink2);background:var(--bg)}
+.dn-w{color:var(--ink3);font-size:11.5px}
+.dn-pos{font-size:12px;color:var(--ink3);white-space:nowrap}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;flex:1 1 240px;justify-content:flex-end}
+.chiprow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+#q{flex:1 1 180px;min-width:150px;padding:7px 12px;border:1px solid var(--line);
+border-radius:8px;font-size:13.5px;font-family:inherit;background:var(--bg)}
+#q:focus{outline:2px solid var(--accent-soft);border-color:var(--accent);background:var(--card)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink2);border-radius:999px;
+padding:5px 12px;font-size:12.5px;cursor:pointer;font-family:inherit}
+.chip:hover{border-color:#c9d2de;color:var(--ink)}
+.chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.chip .n{opacity:.6;margin-left:4px;font-size:11.5px}
+.count{color:var(--ink3);font-size:12.5px;margin-left:auto;white-space:nowrap}
+main{padding:20px 0 60px}
+.sec{border-bottom:1px solid var(--line);margin:0 0 18px;padding-bottom:10px;
+display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.sec h2{margin:0;font-size:15px;font-weight:650}
+.sec .h{color:var(--ink3);font-size:12.5px;font-weight:400}
+.sec .r{margin-left:auto;font-size:12.5px;color:var(--ink3)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(345px,1fr));gap:11px}
+.it{display:flex;gap:12px;padding:11px;background:var(--card);border:1px solid var(--line);
+border-radius:11px;color:var(--ink)}
+.it:hover{border-color:#9ecbff;background:#f7fbff;text-decoration:none}
+.it img{width:88px;height:88px;flex:0 0 88px;border-radius:8px;background:#eef1f5;object-fit:cover}
+.it .tx{min-width:0;display:flex;flex-direction:column;gap:5px;flex:1}
+.it .tt{font-size:13.5px;line-height:1.45;font-weight:550;
+display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.it .mt{margin-top:auto;display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:11.5px;color:var(--ink3)}
+.shop{background:var(--bg);border:1px solid var(--line);border-radius:5px;padding:1px 7px;
+color:var(--ink2);font-size:11.5px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.state{background:var(--ok-bg);color:var(--ok);border-radius:5px;padding:1px 7px;font-size:11.5px}
+.empty{color:var(--ink3);font-size:13.5px;padding:30px 0}
+.dayfoot{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:9px;
+margin:22px 0 0;padding:18px 0 6px;border-top:1px solid var(--line)}
+.dayfoot .df-t{font-size:12.5px;color:var(--ink3)}
+footer{padding:0 0 40px;color:var(--ink3);font-size:12px;text-align:center}
+@media(max-width:520px){.it img{width:72px;height:72px;flex-basis:72px}}
+</style>
+</head>
+<body>
+<div style="display:flex;align-items:center;gap:12px;padding:9px 18px;background:#1f2430;color:#fff;font:13px/1.5 system-ui,-apple-system,'Segoe UI',sans-serif"><span style="font-weight:600">速卖通选品情报 · 每日更新</span><span style="opacity:.72">2026-11-15 周日</span><span class="dn-pos">第 29 / 29 期</span><a href="archive.html" style="margin-left:auto;color:#9ecbff;text-decoration:none">历史归档 →</a></div>
+<div class="top"><div class="wrap inner"><div class="toprow"><h1>速卖通选品情报 · 2026-11-15<span class="h1d">周日</span></h1><span class="sp"></span><p class="stat"><span class="pill">新增 <b>15</b> 件</span><span>扫描 <b>1</b> 次（成功 <b>1</b>）</span><span>覆盖店铺 <b>31</b> 家（成功 <b>31</b>）</span><span>涉及店铺 <b>6</b> 家</span></p></div><div class="toolbar"><div class="daynav"><a class="dn-btn" href="2026-11-14.html">‹ 前一天<span class="dn-w">2026-11-14</span></a><span class="dn-pos">2026-11-15 周日</span><span class="dn-btn off">› 后一天</span></div><div class="controls"><input id="q" type="search" placeholder="搜标题 / 店铺…"><span class="count" id="cnt"></span></div></div><div class="chiprow"><div class="chips"><button class="chip on" data-shop="all">全部<span class="n">15</span></button><button class="chip" data-shop="GK Robot Toy Store">GK Robot Toy Store<span class="n">6</span></button><button class="chip" data-shop="Saint Seiya Elite Collection Store">Saint Seiya Elite Collection Store<span class="n">4</span></button><button class="chip" data-shop="Mr. Li&#x27;s Studio Store">Mr. Li&#x27;s Studio Store<span class="n">2</span></button><button class="chip" data-shop="Buddy Toy Store">Buddy Toy Store<span class="n">1</span></button><button class="chip" data-shop="CT Figure Hobby Store">CT Figure Hobby Store<span class="n">1</span></button><button class="chip" data-shop="Transformers Figures Store">Transformers Figures Store<span class="n">1</span></button></div></div></div></div>
+<main class="wrap">
+  <div class="sec"><h2>2026-11-15 新增商品</h2><span class="h">按店铺归集，点击卡片打开速卖通原页</span>
+  <span class="r">数据源 AliExpressMonitor</span></div>
+  <div class="grid">
+<a class="it" href="https://www.aliexpress.com/item/3256813451476158.html" target="_blank" rel="noopener" data-shop="Saint Seiya Elite Collection Store" data-k="in stock transforming toy robothero rh-02 airwolf springer triple changer finished robot action figure collectible toy saint seiya elite collection store"><img src="https://ae-pic-a1.aliexpress-media.com/kf/S702f5bc60b7741b7af883110545aa3a5n.jpg_350x350.jpg" data-src="https://ae-pic-a1.aliexpress-media.com/kf/S702f5bc60b7741b7af883110545aa3a5n.jpg_350x350.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div class="tx"><div class="tt">In Stock Transforming Toy RobotHero RH-02 AirWolf Springer Triple Changer Finished Robot Action Figure Collectible Toy</div><div class="mt"><span class="shop">Saint Seiya Elite Collection Store</span><span>10:52</span><span style="margin-left:auto">源商品 ↗</span></div></div></a>
+<a class="it" href="https://www.aliexpress.com/item/3256813439496416.html" target="_blank" rel="noopener" data-shop="Saint Seiya Elite Collection Store" data-k="in stock 1/12 feng model hulk pants cloth upgrade parts pants only action figure not included toy figure accessory gift saint seiya elite collection store"><img src="https://ae-pic-a1.aliexpress-media.com/kf/Sc7ea822cdb164d65b42bcd368402f43cR.jpg_350x350.jpg" data-src="https://ae-pic-a1.aliexpress-media.com/kf/Sc7ea822cdb164d65b42bcd368402f43cR.jpg_350x350.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div class="tx"><div class="tt">In Stock 1/12 Feng Model Hulk Pants Cloth Upgrade Parts Pants Only Action Figure Not Included Toy Figure Accessory Gift</div><div class="mt"><span class="shop">Saint Seiya Elite Collection Store</span><span>10:52</span><span style="margin-left:auto">源商品 ↗</span></div></div></a>
+<a class="it" href="https://www.aliexpress.com/item/3256813451915984.html" target="_blank" rel="noopener" data-shop="Saint Seiya Elite Collection Store" data-k="pre-order  world 303rd marines fav-a152 marine mist raider  fav-a153 marineshield camelbot 1/18 scale action figure saint seiya elite collection store"><img src="https://ae-pic-a1.aliexpress-media.com/kf/Se8e0538429434b0fb713e17f78410bf13.jpg_350x350.jpg" data-src="https://ae-pic-a1.aliexpress-media.com/kf/Se8e0538429434b0fb713e17f78410bf13.jpg_350x350.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div class="tx"><div class="tt">Pre-Order  World 303rd Marines FAV-A152 Marine Mist Raider  FAV-A153 Marineshield Camelbot 1/18 Scale Action Figure</div><div class="mt"><span class="shop">Saint Seiya Elite Collection Store</span><span>10:52</span><span style="margin-left:auto">源商品 ↗</span></div></div></a>
+<a class="it" href="https://www.aliexpress.com/item/3256813452261606.html" target="_blank" rel="noopener" data-shop="Saint Seiya Elite Collection Store" data-k="pre-order world project blackbox pbb-ar014 bee wingman  pbb-ar015 carver 1/18 scale action figure collectible model toy saint seiya elite collection store"><img src="https://ae-pic-a1.aliexpress-media.com/kf/Se5eabce7dc3445f2ba7755344bea1222W.jpg_350x350.jpg" data-src="https://ae-pic-a1.aliexpress-media.com/kf/Se5eabce7dc3445f2ba7755344bea1222W.jpg_350x350.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div class="tx"><div class="tt">Pre-Order World Project Blackbox PBB-AR014 Bee Wingman  PBB-AR015 Carver 1/18 Scale Action Figure Collectible Model Toy</div><div class="mt"><span class="shop">Saint Seiya Elite Collection Store</span><span>10:52</span><span style="margin-left:auto">源商品 ↗</span></div></div></a>
+<a class="it" href="https://www.aliexpress.com/item/3256813440728528.html" target="_blank" rel="noopener" data-shop="CT Figure Hobby Store" data-k="【 in stock now 】 am-01 tian bu t shi ko hot breaking original great improvement transformation toy mobile robot model toy gift ct figure hobby store"><img src="https://ae-pic-a1.aliexpress-media.com/kf/Sbcb0cea12c074374ba85fe362729f4dat.jpg_350x350.jpg" data-src="https://ae-pic-a1.aliexpress-media.com/kf/Sbcb0cea12c074374ba85fe362729f4dat.jpg_350x350.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div class="tx"><div class="tt">【 In Stock NOW 】 AM-01 Tian Bu T Shi KO Hot Breaking Original Great Improvement Transformation Toy Mobile Robot Model Toy Gift</div><div class="mt"><span class="shop">CT Figure Hobby Store</span><span>10:49</span><span style="margin-left:auto">源商品 ↗</span></div></div></a>
+<a class="it" href="https://www.aliexpress.com/item/3256813450589965.html" target="_blank" rel="noopener" data-shop="GK Robot Toy Store" data-k="in stock: legendary evolution black lion, japanese 40th anniversary white lion, green lion hand and foot mp-style accessory pack gk robot toy store"><img src="https://ae-pic-a1.aliexpress-media.com/kf/S2bf6b414ec634b329f8d05654c75bb5bd.jpg_350x350.jpg" data-src="https://ae-pic-a1.aliexpress-media.com/kf/S2bf6b414ec634b329f8d05654c75bb5bd.jpg_350x350.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div class="tx"><div class="tt">In stock: Legendary Evolution Black Lion, Japanese 40th Anniversary White Lion, Green Lion Hand and Foot MP-Style Accessory Pack</div><div class="mt"><span class="shop">GK Robot Toy Store</span><span>10:44</span><span style="margin-left:auto">源商品 ↗</span></div></div></a>
+<a class="it" href="https://www.aliexpress.com/item/3256813450711898.html" target="_blank" rel="noopener" data-shop="GK Robot Toy Store" data-k="in stock xiao guo studio ss86 shockwave upper arms, legs, and feet hollow filling accessory pack gk robot toy store"><img src="https://ae-pic-a1.aliexpress-media.com/kf/S1266821956dc4e1f99249b335c1d67c4y.jpg_350x350.jpg" data-src="https://ae-pic-a1.aliexpress-media.com/kf/S1266821956dc4e1f99249b335c1d67c4y.jpg_350x350.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div class="tx"><div class="tt">In Stock Xiao Guo Studio SS86 Shockwave Upper Arms, Legs, and Feet Hollow Filling Accessory Pack</div><div class="mt"><span class="shop">GK Robot Toy Store</span><span>10:44</span><span style="margin-left:auto">源商品 ↗</span></div></div></a>
+<a class="it" href="https://www.aliexpress.com/item/3256813450740057.html" target="_blank" rel="noopener" data-shop="GK Robot Toy Store" data-k="in stock 3d-printed tfp leader&#x27;s certificate dark star sword accessory pack with 5mm handle, universally compatible gk robot toy store"><img src="https://ae-pic-a1.aliexpress-media.com/kf/S0808b59c472449a3a75aed4c4d23ff9av.jpg_350x350.jpg" data-src="https://ae-pic-a1.aliexpress-media.com/kf/S0808b59c472449a3a75aed4c4d23ff9av.jpg_350x350.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div class="tx"><div class="tt">In Stock 3D-printed TFP Leader&#x27;s Certificate Dark Star Sword Accessory Pack with 5mm Handle, Universally Compatible</div><div class="mt"><span class="shop">GK Robot Toy Store</span><span>10:44</span><span style="margin-left:auto">源商品 ↗</span></div></div></a>
+<a class="it" href="https://www.aliexpress.com/item/3256813451948041.html" target="_blank" rel="noopener" data-shop="GK Robot Toy Store" data-k="in stock orlando tfcon26 exclusive ox ps-24r police action robot model toy collectible gift gk robot toy store"><img src="https://ae-pic-a1.aliexpress-media.com/kf/S53042ad478584582be4d094fd09ebbc6C.jpg_350x350.jpg" data-src="https://ae-pic-a1.aliexpress-media.com/kf/S53042ad478584582be4d094fd09ebbc6C.jpg_350x350.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div class="tx"><div class="tt">In Stock Orlando TFCON26 Exclusive OX PS-24R Police Action Robot Model Toy Collectible Gift</div><div class="mt"><span class="shop">GK Robot Toy Store</span><span>10:44</span><span style="margin-left:auto">源商品 ↗</span></div></div></a>
+<a class="it" href="https://www.aliexpress.com/item/3256813440076394.html" target="_blank" rel="noopener" data-shop="GK Robot Toy Store" data-k="new arrival in stock mmc ox r54 op heavy armor version with accessory pack set transforming car toy for collection gift gk robot toy store"><img src="https://ae-pic-a1.aliexpress-media.com/kf/S2b82e52a82a84d1580328a66a4755bf4U.jpg_350x350.jpg" data-src="https://ae-pic-a1.aliexpress-media.com/kf/S2b82e52a82a84d1580328a66a4755bf4U.jpg_350x350.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div class="tx"><div class="tt">New Arrival in Stock MMC OX R54 OP Heavy Armor Version with Accessory Pack Set Transforming Car Toy for Collection Gift</div><div class="mt"><span class="shop">GK Robot Toy Store</span><span>10:44</span><span style="margin-left:auto">源商品 ↗</span></div></div></a>
+<a class="it" href="https://www.aliexpress.com/item/3256813440079020.html" target="_blank" rel="noopener" data-shop="GK Robot Toy Store" data-k="[in stock soon] dwe49m mirror horizontal cannon dwe70g golden cicada extra small scale transforming toy collectible gk robot toy store"><img src="https://ae-pic-a1.aliexpress-media.com/kf/Sb947132f08294218a094d79e923e6d5cz.jpg_350x350.jpg" data-src="https://ae-pic-a1.aliexpress-media.com/kf/Sb947132f08294218a094d79e923e6d5cz.jpg_350x350.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div class="tx"><div class="tt">[IN STOCK SOON] DWE49M Mirror Horizontal Cannon DWE70G Golden Cicada Extra Small Scale Transforming Toy Collectible</div><div class="mt"><span class="shop">GK Robot Toy Store</span><span>10:44</span><span style="margin-left:auto">源商品 ↗</span></div></div></a>
+<a class="it" href="https://www.aliexpress.com/item/3256813435763167.html" target="_blank" rel="noopener" data-shop="Transformers Figures Store" data-k="brand new transformers voyager class ectotron ecto‑1 g1 studio movie model cartoon action figure anime movable robot toys gifts transformers figures store"><img src="https://ae-pic-a1.aliexpress-media.com/kf/Seeac5eef9c0044e180f0abeaf17067f9a.png_350x350.png" data-src="https://ae-pic-a1.aliexpress-media.com/kf/Seeac5eef9c0044e180f0abeaf17067f9a.png_350x350.png" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div class="tx"><div class="tt">Brand New Transformers Voyager Class Ectotron Ecto‑1 G1 Studio Movie Model Cartoon Action Figure Anime Movable Robot Toys Gifts</div><div class="mt"><span class="shop">Transformers Figures Store</span><span>10:44</span><span style="margin-left:auto">源商品 ↗</span></div></div></a>
+<a class="it" href="https://www.aliexpress.com/item/3256813437757206.html" target="_blank" rel="noopener" data-shop="Buddy Toy Store" data-k="toypoint/tp saint seiya myth cloth exm god of death totem/object asgard/god warrior knights of the zodiac action figure toy gift buddy toy store"><img src="https://ae-pic-a1.aliexpress-media.com/kf/Sec89ab8b7ca545e6b6ca38785aae0e367.jpg_350x350.jpg" data-src="https://ae-pic-a1.aliexpress-media.com/kf/Sec89ab8b7ca545e6b6ca38785aae0e367.jpg_350x350.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div class="tx"><div class="tt">Toypoint/TP Saint Seiya Myth Cloth EXM God of Death Totem/Object Asgard/God Warrior Knights of the Zodiac Action Figure Toy Gift</div><div class="mt"><span class="shop">Buddy Toy Store</span><span>10:42</span><span style="margin-left:auto">源商品 ↗</span></div></div></a>
+<a class="it" href="https://www.aliexpress.com/item/3256813432834370.html" target="_blank" rel="noopener" data-shop="Mr. Li&#x27;s Studio Store" data-k="in stock new ns studio wlk toys ns012 ns013 ns014  ns001 ns002  ns003 dragon ball orange mechanic puppet type action figure mr. li&#x27;s studio store"><img src="https://ae-pic-a1.aliexpress-media.com/kf/S4a1ec03997a241da83f241ad35de2205I.jpg_350x350.jpg" data-src="https://ae-pic-a1.aliexpress-media.com/kf/S4a1ec03997a241da83f241ad35de2205I.jpg_350x350.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div class="tx"><div class="tt">In Stock New NS Studio Wlk Toys NS012 NS013 NS014  NS001 NS002  NS003 Dragon Ball Orange Mechanic Puppet Type Action Figure</div><div class="mt"><span class="shop">Mr. Li&#x27;s Studio Store</span><span>10:40</span><span style="margin-left:auto">源商品 ↗</span></div></div></a>
+<a class="it" href="https://www.aliexpress.com/item/3256813452897806.html" target="_blank" rel="noopener" data-shop="Mr. Li&#x27;s Studio Store" data-k="in stock transformation mpm-15 nbe-02 nbe02 nbe-01 nbe01 brawl bonecrusher enlarged action figures collection gifts mr. li&#x27;s studio store"><img src="https://ae-pic-a1.aliexpress-media.com/kf/S9c393f4310ab4f979cc2fc5a069bdec4T.jpg_350x350.jpg" data-src="https://ae-pic-a1.aliexpress-media.com/kf/S9c393f4310ab4f979cc2fc5a069bdec4T.jpg_350x350.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div class="tx"><div class="tt">In Stock Transformation MPM-15 NBE-02 NBE02 NBE-01 NBE01 Brawl Bonecrusher Enlarged Action Figures Collection Gifts</div><div class="mt"><span class="shop">Mr. Li&#x27;s Studio Store</span><span>10:40</span><span style="margin-left:auto">源商品 ↗</span></div></div></a>
+  </div>
+  <div class="dayfoot"><span class="df-t">继续翻看</span><div class="daynav"><a class="dn-btn" href="2026-11-14.html">‹ 前一天<span class="dn-w">2026-11-14</span></a><span class="dn-pos">2026-11-15 周日</span><span class="dn-btn off">› 后一天</span></div></div>
+</main>
+<footer>由 AliExpressMonitor 的扫描库自动生成 · 每日扫描后更新</footer>
+<script>
+(function(){
+  var q=document.getElementById('q'), chips=[].slice.call(document.querySelectorAll('.chip')),
+      items=[].slice.call(document.querySelectorAll('.it')), cnt=document.getElementById('cnt'),
+      cur='all';
+  function apply(){
+    var kw=(q.value||'').trim().toLowerCase(), shown=0;
+    items.forEach(function(el){
+      var okShop = cur==='all' || el.dataset.shop===cur;
+      var okKw = !kw || (el.dataset.k||'').indexOf(kw)>=0;
+      var on = okShop && okKw;
+      el.style.display = on ? '' : 'none';
+      if(on) shown++;
+    });
+    if(cnt) cnt.textContent = '显示 ' + shown + ' / ' + items.length + ' 件';
+  }
+  chips.forEach(function(c){ c.addEventListener('click', function(){
+    chips.forEach(function(x){ x.classList.remove('on'); });
+    c.classList.add('on'); cur = c.dataset.shop || 'all'; apply();
+  }); });
+  if(q){ q.addEventListener('input', apply); }
+  apply();
+})();
+</script>
+<script>
+(function(){
+  var t=document.querySelector('.top'), y0=window.scrollY;
+  window.addEventListener('scroll', function(){
+    var y=window.scrollY;
+    if(y>120 && y>y0+6) t.classList.add('hide');
+    else if(y<y0-6 || y<120) t.classList.remove('hide');
+    y0=y;
+  }, {passive:true});
+})();
+</script>
+<script>
+(function(){
+  // 速卖通图床对同一 IP 的并发请求会 429：失败后退避重试两次，仍失败才隐藏
+  document.querySelectorAll('.it img').forEach(function(im){
+    var src = im.getAttribute('data-src') || im.getAttribute('src') || '', tries = 0;
+    function fail(){
+      tries++;
+      if(tries <= 2 && src){
+        setTimeout(function(){ im.src = src + (src.indexOf('?') >= 0 ? '&' : '?') + 'r=' + tries; }, 700 * tries);
+      } else { im.style.visibility = 'hidden'; }
+    }
+    function ok(){ im.style.visibility = im.naturalWidth >= 40 ? '' : 'hidden'; }
+    im.addEventListener('error', fail);
+    im.addEventListener('load', ok);
+    if(im.complete){ if(im.naturalWidth) ok(); }
+  });
+})();
+</script>
+</body>
+</html>
